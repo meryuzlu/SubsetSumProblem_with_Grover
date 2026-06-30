@@ -35,7 +35,7 @@ REPOSITORY CONTENTS
 
 *Subset_Sum_Manual_Adder.ipynb	Complete notebook containing the implementation, explanations, circuit construction, and benchmark examples.
 
-*Subset_Sum_Project.py	Python implementation of the same algorithm.
+*Subset_Sum_Final.py	Python implementation of the same algorithm.
 
 subset_sum_WeightedAdder.ipynb	Earlier implementation using Qiskit’s built-in WeightedAdder circuit for comparison.
 
