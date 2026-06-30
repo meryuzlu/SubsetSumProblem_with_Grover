@@ -1,18 +1,16 @@
-SUBSET-SUM PROBLEM WITH GROVER'S ALGORITHM
+# SUBSET-SUM PROBLEM WITH GROVER'S ALGORITHM
 
 
 This project implements Grover’s search algorithm to solve small instances of the Subset Sum Problem using Qiskit.
 
 Instead of relying on Qiskit’s built-in WeightedAdder circuit, the subset-sum oracle is constructed manually from elementary reversible quantum gates. The project demonstrates how reversible arithmetic, a phase oracle, and Grover’s diffusion operator can be combined to search for subsets whose elements sum to a specified target.
 
-⸻
-
-Problem Statement: Given a finite set of positive integers A = {a₀, a₁, ..., aₙ₋₁} and a target value T, the objective is to determine a subset S ⊆ A whose elements satisfy ∑ x = T,   x ∈ S. For example, A = {2, 3, 5, 7} and T = 7 has solutions {7} and {2,5}.
 
 
-⸻
+## Problem Statement: Given a finite set of positive integers A = {a₀, a₁, ..., aₙ₋₁} and a target value T, the objective is to determine a subset S ⊆ A whose elements satisfy ∑ x = T,   x ∈ S. For example, A = {2, 3, 5, 7} and T = 7 has solutions {7} and {2,5}.
 
-ALGORITHM OVERVIEW 
+
+## ALGORITHM OVERVIEW 
 
 Each possible subset is represented by a binary string. For example, fo the example above, 1010 means that the 3 and 7 are included in the subset.
 
@@ -28,9 +26,9 @@ The algorithm proceeds as follows:
 
 The subsets with the highest probabilities correspond to the solutions amplified by Grover’s algorithm.
 
-⸻
 
-REPOSITORY CONTENTS
+
+## REPOSITORY CONTENTS
 
 
 *Subset_Sum_Manual_Adder.ipynb	Complete notebook containing the implementation, explanations, circuit construction, and benchmark examples.
@@ -39,24 +37,24 @@ REPOSITORY CONTENTS
 
 subset_sum_WeightedAdder.ipynb	Earlier implementation using Qiskit’s built-in WeightedAdder circuit for comparison.
 
-⸻
 
-Notes
+
+## Notes
 
 * This implementation is intended for educational and research purposes.
 * Intermediate measurements are not used; the notebook uses Qiskit’s Statevector class to inspect the final probability distribution.
 * The implementation is designed for small benchmark instances suitable for quantum circuit simulation.
 
-⸻
 
-References
+
+## References
 
 * Qiskit Documentation: https://qiskit.org/documentation/
 * IBM Quantum Learning: https://quantum.cloud.ibm.com/learning
 
-⸻
 
-EXAMPLE USAGE
+
+## EXAMPLE USAGE
 
 Open Subset_Sum_Manual_Adder.ipynb in Jupyter Notebook or Google Colab and run the cells sequentially.
 
