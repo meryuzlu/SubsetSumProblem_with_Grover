@@ -54,4 +54,23 @@ References
 * Qiskit Documentation: https://qiskit.org/documentation/
 * IBM Quantum Learning: https://quantum.cloud.ibm.com/learning
 
+⸻
+
+EXAMPLE USAGE
+
+Open Subset_Sum_Manual_Adder.ipynb in Jupyter Notebook or Google Colab and run the cells sequentially.
+
+To solve a subset-sum instance for the example mentioned earlier, call 
+
+run_grover([2, 3, 5,7], 7)
+
+
+The notebook will
+
+* construct the subset-sum oracle,
+* perform the Grover iterations,
+* compute the final statevector,
+* display the probability distribution over all candidate subsets, and
+* print the most likely subset found by the algorithm.
+
 
