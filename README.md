@@ -1,4 +1,4 @@
-Subset-Sum Problem with Grover's Algorithm
+SUBSET-SUM PROBLEM WITH GROVER'S ALGORITHM
 
 
 This project implements Grover’s search algorithm to solve small instances of the Subset Sum Problem using Qiskit.
