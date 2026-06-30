@@ -1,12 +1,57 @@
 Subset-Sum Problem with Grover's Algorithm
 
-Given a set of positive integers, and a target value T, the subset-sum problem asks whether there exists a subset whose elements sum to T. 
 
-The project explores two approaches:
-1) A manual reversible adder construction built from elementary gates.
-2) An earlier implementation using Qiskit's built-in WeightedAdder circuit.
+This project implements Grover’s search algorithm to solve small instances of the Subset Sum Problem using Qiskit.
+
+Instead of relying on Qiskit’s built-in WeightedAdder circuit, the subset-sum oracle is constructed manually from elementary reversible quantum gates. The project demonstrates how reversible arithmetic, a phase oracle, and Grover’s diffusion operator can be combined to search for subsets whose elements sum to a specified target.
+
+⸻
+
+Problem Statement: Given a finite set of positive integers A = {a₀, a₁, ..., aₙ₋₁} and a target value T, the objective is to determine a subset S ⊆ A whose elements satisfy ∑ x = T,   x ∈ S. For example, A = {2, 3, 5, 7} and T = 7 has solutions {7} and {2,5}.
 
 
--Subset_Sum_Manual_Adder.ipynp is the final project with the manual adder with detailed explanations. 
+⸻
 
--Subset_Sum_Project.py is the Python implementation of the final algorithm. 
+ALGORITHM OVERVIEW 
+
+Each possible subset is represented by a binary string. For example, fo the example above, 1010 means that the 3 and 7 are included in the subset.
+
+The algorithm proceeds as follows:
+
+1. Prepare an equal superposition over all possible subsets.
+2. Compute each subset sum using a manually constructed reversible adder.
+3. Compare the computed sum with the target and mark valid subsets with a phase flip.
+4. Uncompute the auxiliary registers.
+5. Apply Grover’s diffuser.
+6. Repeat the oracle and diffuser the appropriate number of times.
+7. Compute the final statevector and obtain the probability distribution over the candidate subsets.
+
+The subsets with the highest probabilities correspond to the solutions amplified by Grover’s algorithm.
+
+⸻
+
+REPOSITORY CONTENTS
+
+
+*Subset_Sum_Manual_Adder.ipynb	Complete notebook containing the implementation, explanations, circuit construction, and benchmark examples.
+
+*Subset_Sum_Project.py	Python implementation of the same algorithm.
+
+subset_sum_WeightedAdder.ipynb	Earlier implementation using Qiskit’s built-in WeightedAdder circuit for comparison.
+
+⸻
+
+Notes
+
+* This implementation is intended for educational and research purposes.
+* Intermediate measurements are not used; the notebook uses Qiskit’s Statevector class to inspect the final probability distribution.
+* The implementation is designed for small benchmark instances suitable for quantum circuit simulation.
+
+⸻
+
+References
+
+* Qiskit Documentation: https://qiskit.org/documentation/
+* IBM Quantum Learning: https://quantum.cloud.ibm.com/learning
+
+
