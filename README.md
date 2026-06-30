@@ -64,7 +64,7 @@ To solve the example introduced above, call
 
 run_grover([2, 3, 5,7], 7)
 
-The program computes the final statevector, displays a histogram of the resulting probability distribution over all candidate subsets, and prints the most likely subset found by Grover's algorithm. 
+The program computes the final statevector, displays a histogram of the resulting probability distribution over all candidate subsets, and prints the most likely subset found by Grover's algorithm.
 
 
 The notebook will
