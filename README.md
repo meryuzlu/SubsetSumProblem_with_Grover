@@ -7,7 +7,9 @@ Instead of relying on Qiskit’s built-in WeightedAdder circuit, the subset-sum 
 
 
 
-## Problem Statement: Given a finite set of positive integers A = {a₀, a₁, ..., aₙ₋₁} and a target value T, the objective is to determine a subset S ⊆ A whose elements satisfy ∑ x = T,   x ∈ S. For example, A = {2, 3, 5, 7} and T = 7 has solutions {7} and {2,5}.
+## Problem Statement 
+
+Given a finite set of positive integers A = {a₀, a₁, ..., aₙ₋₁} and a target value T, the objective is to determine a subset S ⊆ A whose elements satisfy ∑ x = T,   x ∈ S. For example, A = {2, 3, 5, 7} and T = 7 has solutions {7} and {2,5}.
 
 
 ## ALGORITHM OVERVIEW 
